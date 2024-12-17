@@ -1,0 +1,283 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Evita espacios extra */
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(90deg, #0d0d0d, #1a1a1a);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00e6e6;
+    box-shadow: 0 4px 10px rgba(0, 230, 230, 0.5);
+}
+
+.header .titleHeader {
+    font-size: 2.5rem;
+    color: #00e6e6;
+    text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6;
+    margin-bottom: 10px;
+}
+
+.header .Intro {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.header span {
+    color: #00e6e6;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav div {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav img {
+    width: 25px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: drop-shadow(0 0 5px #00e6e6);
+}
+
+nav img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 15px #00e6e6);
+}
+
+nav p {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav p:hover {
+    color: #00e6e6;
+    text-shadow: 0 0 10px #00e6e6;
+    font-weight: bold;
+}
+
+/* Estilo para el menú activo */
+nav p.active {
+    color: #00e6e6;
+    text-shadow: 0 0 10px #00e6e6;
+    font-weight: bold;
+}
+
+/* MAIN */
+main {
+    padding: 20px;
+}
+
+.Proyects {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.MainTittleProyects {
+    font-size: 2rem;
+    color: #00e6e6;
+    margin-bottom: 20px;
+}
+
+.titleFirstProyect {
+    font-size: 1.3rem;
+    color: #00e6e6;
+    margin-bottom: 10px;
+}
+
+.firstProyect {
+    font-size: 1rem;
+    color: #b3b3b3;
+    margin-bottom: 20px;
+}
+
+/* Imágenes de proyectos */
+.loginProyect,
+.mainGUIProyect {
+    width: 100%;
+    max-width: 300px; /* Máximo tamaño */
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 230, 230, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loginProyect:hover,
+.mainGUIProyect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 230, 230, 0.7);
+}
+
+.githubFirstProyect {
+    display: inline-block;
+    background-color: #00e6e6;
+    color: #0d0d0d;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.githubFirstProyect:hover {
+    background-color: #009999;
+    box-shadow: 0 0 10px #00e6e6;
+    padding: 2 2 2 2;
+}
+
+/* Sección Lenguajes */
+.classLanguajes {
+    background-color: #1a1a1a;
+    border: 2px solid #00e6e6;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 230, 230, 0.5);
+}
+
+.languajesTittle {
+    font-size: 1.8rem;
+    color: #00e6e6;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.webDesign,
+.mobileApps {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.webDesign h2,
+.mobileApps h2 {
+    color: #00e6e6;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.webDesignList,
+.mobileAppsList {
+    color: #b3b3b3;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background-color: #0d0d0d;
+    color: #b3b3b3;
+    padding: 15px;
+    margin-top: 30px;
+    border-top: 2px solid #00e6e6;
+    font-size: 0.8rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .header .titleHeader {
+        font-size: 2rem;
+    }
+
+    .header .Intro {
+        font-size: 0.9rem;
+    }
+
+    nav div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .loginProyect,
+    .mainGUIProyect {
+        max-width: 80%;
+    }
+
+    .MainTittleProyects,
+    .languajesTittle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .titleHeader {
+        font-size: 1.8rem;
+    }
+
+    nav p {
+        font-size: 0.8rem;
+    }
+
+    .loginProyect,
+    .mainGUIProyect {
+        max-width: 90%;
+    }
+
+    .MainTittleProyects,
+    .languajesTittle {
+        font-size: 1.3rem;
+    }
+}
+
+/* Efectos en los enlaces del menú */
+nav p {
+    transition: color 0.3s, text-shadow 0.3s, font-weight 0.3s;
+}
+
+/* Efecto de transición suave para las secciones */
+section {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Estilo de resaltado cuando la imagen de los proyectos está en hover */
+.loginProyect,
+.mainGUIProyect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loginProyect:hover,
+.mainGUIProyect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 230, 230, 0.7);
+}
+
+/* Estilos de iconos sociales */
+nav img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 15px #00e6e6);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
